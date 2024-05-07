@@ -1,4 +1,4 @@
-package HW8.Snacks;
+package HW8.SnackHandlers;
 
 import HW8.Snack;
 import HW8.SnackDispenseHandler;

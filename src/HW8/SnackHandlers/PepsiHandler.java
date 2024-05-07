@@ -1,17 +1,17 @@
-package HW8.Snacks;
+package HW8.SnackHandlers;
 import HW8.Snack;
 import HW8.SnackDispenseHandler;
 
 /**
- * The type Doritos dispenser handler.
+ * The type Pepsi dispenser handler.
  */
-public class DoritosHandler extends SnackDispenseHandler {
+public class PepsiHandler extends SnackDispenseHandler {
     /**
-     * Instantiates a new Doritos dispenser handler.
+     * Instantiates a new Pepsi dispenser handler.
      *
-     * @param next the next dispenser handler in the chain
+     * @param next the next
      */
-    public DoritosHandler(SnackDispenseHandler next) {
+    public PepsiHandler(SnackDispenseHandler next) {
         super(next);
     }
 
@@ -22,15 +22,15 @@ public class DoritosHandler extends SnackDispenseHandler {
      * @return true if the snack was successfully dispensed, false otherwise
      */
     public boolean dispense(Snack snack){
-        System.out.println("Vending Machine Mechanical Arm Moving to Doritos...");
-        if (snack.getName().equals("Doritos")){
-            System.out.println("Please wait...Dispensing Doritos...");
+        System.out.println("Vending Machine Mechanical Arm Moving to Pepsi...");
+        if (snack.getName().equals("Pepsi")){
+            System.out.println("Please wait...Dispensing Pepsi...");
             if (snack.getQuantity() > 0){
-                System.out.println("Successfully dispensed Doritos.");
+                System.out.println("Successfully dispensed Pepsi.");
                 snack.setQuantity(snack.getQuantity() - 1);
                 return true;
             } else {
-                System.out.println("Sorry, Vending Machine Out of Doritos. Your money will be returned soon...");
+                System.out.println("Sorry, Vending Machine Out of Pepsi. Your money will be returned soon...");
                 return false;
             }
         } else {

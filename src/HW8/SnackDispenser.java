@@ -1,6 +1,6 @@
 package HW8;
 
-import HW8.Snacks.*;
+import HW8.SnackHandlers.*;
 /**
  * Class representing a snack dispenser in a vending machine.
  */

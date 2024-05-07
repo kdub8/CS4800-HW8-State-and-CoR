@@ -4,7 +4,7 @@ package HW8;
  */
 public abstract class SnackDispenseHandler {
     private SnackDispenseHandler next;
-    private Snack snack;
+
     /**
      * Constructs a new snack dispenser handler with the next handler in the chain.
      *
