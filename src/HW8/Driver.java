@@ -1,11 +1,14 @@
 package HW8;
-
+/**
+ * The main driver class to demonstrate the functionality of Kevin's Vending Machine.
+ */
 public class Driver {
 
     public static void main(String[] args){
         System.out.println("----------Kevin's Vending Machine----------\n");
         VendingMachine vendingMachine = new VendingMachine();
 
+        // Testing various scenarios
         vendingMachine.insertMoney(5.0);  //should print out "Please select an option before inserting money"
         vendingMachine.dispenseSnack();     //should print out "Cannot dispense snack before selecting snack and inserting money."
         vendingMachine.retrieveChange();    //prints "Giving 0.0 for change"
@@ -46,6 +49,7 @@ public class Driver {
         vendingMachine.dispenseSnack();
         System.out.println("Total change given: $" + vendingMachine.retrieveChange());
         System.out.println();
+        //no issues
 
         vendingMachine.selectSnack("Cheetos");
         vendingMachine.insertMoney(2.0);
@@ -53,6 +57,7 @@ public class Driver {
         vendingMachine.dispenseSnack();
         System.out.println("Total change given: $" + vendingMachine.retrieveChange());
         System.out.println();
+        //no issues
 
         vendingMachine.selectSnack("Funyuns");
         vendingMachine.selectSnack("Doritos");
@@ -60,6 +65,6 @@ public class Driver {
         vendingMachine.dispenseSnack();
         System.out.println("Total change given: $" + vendingMachine.retrieveChange());
         System.out.println();
-
+        //no issues
     }
 }

@@ -2,8 +2,16 @@ package HW8.VendingMachineStates;
 
 import HW8.StateOfVendingMachine;
 import HW8.VendingMachine;
+
+/**
+ * Represents the state of the vending machine when it is waiting for the user to insert money after selecting a snack.
+ */
 public class WaitingForMoneyState implements StateOfVendingMachine {
 
+    /**
+     * {@inheritDoc}
+     * If the customer changes their mind about the snack, checks if the new snack option is valid.
+     */
     @Override
     public void snackOptionPressed(VendingMachine vendingMachine, String snackName) {
         // This if customer changes their mind of what they want
@@ -16,6 +24,11 @@ public class WaitingForMoneyState implements StateOfVendingMachine {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     * Adds the inserted money to the total, checks if enough money is inserted to dispense the selected snack,
+     * and updates the vending machine's state accordingly.
+     */
     @Override
     public void moneyInserted(VendingMachine vendingMachine, Double money) {
         vendingMachine.setMoneyInserted(vendingMachine.getMoneyInserted() + money);
@@ -30,12 +43,20 @@ public class WaitingForMoneyState implements StateOfVendingMachine {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     * Prints a message indicating that the snack cannot be dispensed yet, as the required amount of money has not been inserted.
+     */
     @Override
     public void dispenseSnack(VendingMachine vendingMachine) {
         System.out.println("Cannot dispense, not enough money! Money inserted: $" + vendingMachine.getMoneyInserted() +
                 " Price for " + vendingMachine.getSnackOptionChosen().getName() + " is: $" + vendingMachine.getSnackOptionChosen().getPrice());
     }
 
+    /**
+     * {@inheritDoc}
+     * Resets the snack selection and transitions back to the idle state, keeping the money in the machine for a refund.
+     */
     @Override
     public void processRefund(VendingMachine vendingMachine) {
         // Resets selection and keeps money in moneyInserted

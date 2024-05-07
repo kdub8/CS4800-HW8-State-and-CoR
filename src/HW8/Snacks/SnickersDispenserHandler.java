@@ -2,13 +2,27 @@ package HW8.Snacks;
 
 import HW8.Snack;
 import HW8.SnackDispenseHandler;
+
+/**
+ * The type Snickers dispenser handler.
+ */
 public class SnickersDispenserHandler extends SnackDispenseHandler {
 
+    /**
+     * Instantiates a new Snickers dispenser handler.
+     *
+     * @param next the next
+     */
     public SnickersDispenserHandler(SnackDispenseHandler next) {
         super(next);
     }
 
-    // Returns true if successful
+    /**
+     * Dispenses the specified snack.
+     *
+     * @param snack the snack to dispense
+     * @return true if the snack was successfully dispensed, false otherwise
+     */
     public boolean dispense(Snack snack){
         System.out.println("Vending Machine Mechanical Arm Moving to Snickers...");
         if (snack.getName().equals("Snickers") ){
@@ -22,6 +36,7 @@ public class SnickersDispenserHandler extends SnackDispenseHandler {
                 return false;
             }
         } else {
+            // Pass the request to the next dispenser handler in the chain
             return super.dispense(snack);
         }
     }

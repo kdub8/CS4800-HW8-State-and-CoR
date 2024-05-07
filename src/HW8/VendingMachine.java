@@ -3,7 +3,9 @@ package HW8;
 import HW8.VendingMachineStates.IdleState;
 
 import java.util.HashMap;
-
+/**
+ * Represents a vending machine that dispenses snacks.
+ */
 public class VendingMachine {
 
     private StateOfVendingMachine stateOfVendingMachine = new IdleState();
@@ -14,6 +16,8 @@ public class VendingMachine {
 
     private static HashMap<String, Snack> snacks = new HashMap<>();
     static {
+        // Initialize the snacks available in the vending machine
+        // Format: Name, Price, Quantity
         Snack coke = new Snack("Coke", 3.50, 5);
         Snack pepsi = new Snack("Pepsi", 3.25, 2);
         Snack cheetos = new Snack("Cheetos", 2.25, 3);
@@ -38,11 +42,19 @@ public class VendingMachine {
     public void setState(StateOfVendingMachine state){
         this.stateOfVendingMachine = state;
     }
-
+    /**
+     * Insert money into the vending machine.
+     *
+     * @param money The amount of money to insert.
+     */
     public void insertMoney(Double money){
         getState().moneyInserted(this, money);
     }
-
+    /**
+     * Select a snack from the vending machine.
+     *
+     * @param snackOption The name of the snack to select.
+     */
     public void selectSnack(String snackOption){
         getState().snackOptionPressed(this, snackOption);
     }
@@ -85,7 +97,12 @@ public class VendingMachine {
         }
         return null;
     }
-
+    /**
+     * Check if a snack option is valid.
+     *
+     * @param name The name of the snack option.
+     * @return True if the snack option is valid, false otherwise.
+     */
     public boolean isValidSnackOption(String name){
         return snacks.containsKey(name);
     }
@@ -93,11 +110,17 @@ public class VendingMachine {
     public SnackDispenser getSnackDispenser() {
         return snackDispenser;
     }
-
+    /**
+     * Dispense the selected snack.
+     */
     public void dispenseSnack(){
         getState().dispenseSnack(this);
     }
-
+    /**
+     * Retrieve change from the vending machine.
+     *
+     * @return The amount of change retrieved.
+     */
     public double retrieveChange(){
         getState().processRefund(this);
         if (this.moneyInserted <= 0) {
