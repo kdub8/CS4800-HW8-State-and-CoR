@@ -2,7 +2,7 @@ package HW8;
 /**
  * The main driver class to demonstrate the functionality of Kevin's Vending Machine.
  */
-public class Driver {
+public class VendingMachineMainDriver {
 
     public static void main(String[] args){
         System.out.println("----------Kevin's Vending Machine----------\n");

@@ -5,13 +5,13 @@ import HW8.SnackDispenseHandler;
 /**
  * The type Pepsi dispenser handler.
  */
-public class PepsiDispenserHandler extends SnackDispenseHandler {
+public class PepsiHandler extends SnackDispenseHandler {
     /**
      * Instantiates a new Pepsi dispenser handler.
      *
      * @param next the next
      */
-    public PepsiDispenserHandler(SnackDispenseHandler next) {
+    public PepsiHandler(SnackDispenseHandler next) {
         super(next);
     }
 

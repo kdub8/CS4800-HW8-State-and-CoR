@@ -4,12 +4,11 @@ package HW8;
  * Represents a snack item in the vending machine.
  */
 public class Snack {
-
+    int quantity;
     String name;
 
     Double price;
 
-    int quantity;
 
     /**
      * Default constructor.
@@ -30,23 +29,6 @@ public class Snack {
         this.quantity = quantity;
     }
 
-    /**
-     * Gets name.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets name.
-     *
-     * @param name the name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * Gets price.
@@ -82,5 +64,23 @@ public class Snack {
      */
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 }

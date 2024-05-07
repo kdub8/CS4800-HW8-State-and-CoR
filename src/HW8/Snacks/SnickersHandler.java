@@ -6,14 +6,14 @@ import HW8.SnackDispenseHandler;
 /**
  * The type Snickers dispenser handler.
  */
-public class SnickersDispenserHandler extends SnackDispenseHandler {
+public class SnickersHandler extends SnackDispenseHandler {
 
     /**
      * Instantiates a new Snickers dispenser handler.
      *
      * @param next the next
      */
-    public SnickersDispenserHandler(SnackDispenseHandler next) {
+    public SnickersHandler(SnackDispenseHandler next) {
         super(next);
     }
 

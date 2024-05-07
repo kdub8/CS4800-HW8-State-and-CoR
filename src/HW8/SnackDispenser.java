@@ -7,12 +7,12 @@ import HW8.Snacks.*;
 public class SnackDispenser {
 
     private SnackDispenseHandler chainOfResponsibility =
-            new CokeDispenserHandler(
-                    new PepsiDispenserHandler(
-                            new CheetosDispenserHandler(
-                                    new DoritosDispenserHandler(
-                                            new KitKatDispenserHandler(
-                                                    new SnickersDispenserHandler(
+            new CokeHandler(
+                    new PepsiHandler(
+                            new CheetosHandler(
+                                    new DoritosHandler(
+                                            new KitKatHandler(
+                                                    new SnickersHandler(
                                                             null))))));
     /**
      * Dispenses the specified snack using the chain of responsibility.
