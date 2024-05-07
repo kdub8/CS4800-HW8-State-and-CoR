@@ -1,6 +1,6 @@
 package HW8;
 
-import HW8.VendingMachineStates.IdleState;
+import HW8.ThreeVendingMachineStates.IdleState;
 
 import java.util.HashMap;
 /**

@@ -1,4 +1,4 @@
-package HW8.VendingMachineStates;
+package HW8.ThreeVendingMachineStates;
 import HW8.StateOfVendingMachine;
 import HW8.VendingMachine;
 import HW8.Snack;
